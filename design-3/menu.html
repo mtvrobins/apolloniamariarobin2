@@ -29,15 +29,15 @@
 <section class="mtitle">
   <span class="mon" data-fill="#ffffff" data-line="#7d1d2b"></span>
   <h1>Our Menu</h1>
-  <p>Sushi · Sashimi · Donburi · Ramen</p>
+  <p>Sushi · Sashimi · Tempura · Donburi</p>
 </section>
 
 <section class="mbody">
   <div class="mgrid" id="menu"></div>
   <div class="photos">
+    <div data-img="uni"></div>
+    <div data-img="toro"></div>
     <div data-img="hero"></div>
-    <div data-img="fish"></div>
-    <div data-img="noren"></div>
   </div>
 </section>
 
@@ -52,7 +52,7 @@ document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
   return '<div class="card"><span class="ic">' + (s.jp.length <= 2 ? s.jp : '桜') + '</span><h2>' + s.title + '</h2>' +
     (s.note ? '<p class="note">' + s.note + '</p>' : '') +
     s.items.map(function (it) {
-      return '<div class="mi"><div class="row"><span>' + it.name + '</span><span class="p">£' + it.price +
+      return '<div class="mi"><div class="row"><span>' + it.name + (it.v ? ' <small class="vv">' + it.v + '</small>' : '') + '</span><span class="p">£' + it.price +
         '</span></div><p>' + it.desc + '</p></div>';
     }).join('') + '</div>';
 }).join('');

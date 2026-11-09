@@ -1,76 +1,118 @@
-/* One menu, shared by all three designs. Edit dishes and prices here once.
-   SAMPLE MENU for the demo: dishes and prices to be replaced with Sakura's real menu
-   (donburi pitched at their £16.90 level). */
+/* Sakura's menu, shared by all three designs. Edit dishes and prices here once.
+   Transcribed from two photos of Sakura's own menus (dine-in menu on Wanderlog,
+   take-away menu on TripAdvisor). Those photos may be older than the current
+   menu, so prices should be checked with the restaurant before going live. */
 window.SAKURA_INFO = {
   address: "36 Boulevard, Weston-super-Mare, BS23 1NF",
   phone: "01934 418388",
   email: "sakurafinestlimited2021@hotmail.com",
-  hours: ["Tuesday – Saturday", "Lunch 12:00 – 14:30", "Dinner 18:00 – 22:00", "Closed Sunday & Monday"],
-  maps: "https://www.google.com/maps/search/?api=1&query=Sakura+Japanese+Restaurant+36+Boulevard+Weston-super-Mare+BS23+1NF"
+  facebook: "https://www.facebook.com/sakurafinestlimited",
+  rating: "4.8",
+  reviews: "882"
 };
 
 window.SAKURA_MENU = [
   {
-    title: "Small Plates", jp: "前菜",
+    title: "Starters", jp: "一品料理",
     items: [
-      { name: "Miso Soup", jp: "味噌汁", desc: "Tofu, wakame, spring onion", price: "3.90" },
-      { name: "Edamame", jp: "枝豆", desc: "Sea salt, or chilli and garlic", price: "4.90" },
-      { name: "Gyoza", jp: "餃子", desc: "Pan-fried pork or vegetable dumplings, five pieces", price: "6.90" },
-      { name: "Chicken Karaage", jp: "唐揚げ", desc: "Crisp marinated chicken, yuzu mayonnaise", price: "7.90" },
-      { name: "Ebi Tempura", jp: "天ぷら", desc: "King prawns in light batter, tentsuyu", price: "8.90" }
+      { name: "Edamame", desc: "Steamed soya beans with sea salt", price: "3.90", v: "V, VG" },
+      { name: "Tori Kuwayaki", desc: "Crispy fried chicken thigh in teriyaki sauce with sesame seeds", price: "6.75" },
+      { name: "Crispy Squid", desc: "Calamari with chilli pepper and ponzu sauce", price: "5.75" },
+      { name: "Softshell Crab Spring Roll", desc: "Softshell crab, minced prawn, spring onion and ginger with wasabi mayonnaise", price: "7.50" },
+      { name: "Kakiage Tempura", desc: "Crisp shredded vegetables with light soy and ginger", price: "5.20", v: "V" },
+      { name: "Ebi Tempura", desc: "Four battered king prawns with light soy and ginger", price: "9.80" },
+      { name: "Spicy Rock Shrimp", desc: "Battered king prawns tossed in spicy garlic mayo with chives", price: "6.50" },
+      { name: "Nasu Miso", desc: "Aubergine sautéed in sweet miso with black sesame", price: "5.20", v: "V, VG" },
+      { name: "Chicken Gyoza", desc: "Japanese chicken dumplings, five pieces", price: "6.00" },
+      { name: "Duck Harumaki", desc: "Duck spring roll with miso teriyaki sauce", price: "5.95" }
     ]
   },
   {
-    title: "Sashimi", jp: "刺身", note: "Fish arrives fresh and is cut to order",
+    title: "Salad", jp: "サラダ",
     items: [
-      { name: "Sake Sashimi", jp: "サーモン", desc: "Salmon, five slices", price: "9.90" },
-      { name: "Maguro Sashimi", jp: "鮪", desc: "Tuna loin, five slices", price: "11.90" },
-      { name: "Sashimi Moriawase", jp: "盛り合わせ", desc: "Chef's platter of tuna, salmon, sea bass, octopus and prawn on shiso and ice", price: "24.90" }
+      { name: "Kani Avocado", desc: "Crabstick, mango and tobiko with onion dressing", price: "6.80" },
+      { name: "Salmon Miso", desc: "Fresh salmon marinated Sakura miso style, with tobiko", price: "7.90" },
+      { name: "Rocket Ebi Avocado", desc: "Mixed leaves, steamed king prawns, avocado and tobiko in Sakura onion dressing", price: "8.50" }
+    ]
+  },
+  {
+    title: "Sashimi", jp: "刺身", note: "Five slices",
+    items: [
+      { name: "Shake", desc: "Salmon", price: "7.20" },
+      { name: "Suzuki", desc: "Sea bass", price: "7.20" },
+      { name: "Saba", desc: "Mackerel", price: "6.80" },
+      { name: "Ebi", desc: "Prawn", price: "7.80" },
+      { name: "Maguro", desc: "Yellowfin tuna", price: "8.50" },
+      { name: "Hamachi", desc: "Yellowtail", price: "9.25" },
+      { name: "Hotategai", desc: "Scallop", price: "8.50" },
+      { name: "Hokkigai", desc: "Surf clam", price: "8.50" }
     ]
   },
   {
     title: "Nigiri", jp: "握り", note: "Two pieces",
     items: [
-      { name: "Sake", jp: "サーモン", desc: "Salmon", price: "5.50" },
-      { name: "Maguro", jp: "鮪", desc: "Tuna", price: "6.50" },
-      { name: "Suzuki", jp: "鱸", desc: "Sea bass with yuzu", price: "5.90" },
-      { name: "Madai", jp: "真鯛", desc: "Sea bream", price: "5.90" },
-      { name: "Saba", jp: "鯖", desc: "Cured mackerel", price: "5.50" },
-      { name: "Ebi", jp: "海老", desc: "Prawn", price: "5.50" }
+      { name: "Shake", desc: "Salmon", price: "4.30" },
+      { name: "Suzuki", desc: "Sea bass", price: "4.15" },
+      { name: "Saba", desc: "Mackerel", price: "4.15" },
+      { name: "Ebi", desc: "Prawn", price: "4.25" },
+      { name: "Maguro", desc: "Tuna", price: "4.80" },
+      { name: "Hamachi", desc: "Yellowtail", price: "5.15" },
+      { name: "Hotategai", desc: "Scallop", price: "4.80" },
+      { name: "Hokkigai", desc: "Surf clam", price: "4.50" }
     ]
   },
   {
-    title: "Sushi Rolls", jp: "巻き", note: "Eight pieces",
+    title: "Omakase", jp: "おまかせ", note: "Chef's choice assorted sushi",
     items: [
-      { name: "Sakura Roll", jp: "桜", desc: "Prawn and avocado inside, torched salmon on top, sesame and sweet soy", price: "13.90" },
-      { name: "Dragon Roll", jp: "龍", desc: "Prawn tempura and cucumber, topped with eel and avocado", price: "14.90" },
-      { name: "Spicy Tuna Roll", jp: "", desc: "Tuna, chilli mayo, spring onion, tempura crunch", price: "12.90" },
-      { name: "California Roll", jp: "", desc: "Crab, avocado, cucumber, tobiko", price: "11.90" },
-      { name: "Vegetable Roll", jp: "", desc: "Avocado, cucumber, pickled radish, asparagus", price: "9.90" }
+      { name: "Sakura Sashimi Moriawase", desc: "Chef's choice of assorted sashimi, twenty slices", price: "27.50" },
+      { name: "Nigiri Take", desc: "Eight pieces of assorted nigiri with three pieces of tekka (tuna) hosomaki", price: "18.50" },
+      { name: "Aburi Sushi", desc: "Seared nigiri, eight pieces", price: "15.95" },
+      { name: "Mix Maki Roll", desc: "California roll, salmon, cheese and vegetarian rolls", price: "13.50" }
     ]
   },
   {
-    title: "Donburi", jp: "丼", note: "Rice bowls with miso soup",
+    title: "Sushi Rolls", jp: "巻き寿司",
     items: [
-      { name: "Sake Don", jp: "鮭丼", desc: "Salmon sashimi over sushi rice, ikura", price: "16.90" },
-      { name: "Chirashi Don", jp: "ちらし", desc: "Chef's selection of sashimi over sushi rice", price: "18.90" },
-      { name: "Chicken Katsu Don", jp: "カツ丼", desc: "Breaded chicken, egg and onion over rice", price: "15.90" },
-      { name: "Unagi Don", jp: "鰻丼", desc: "Grilled eel, sweet tare, sansho pepper", price: "19.90" }
+      { name: "Dragon Roll", desc: "Battered king prawns, lettuce and tobiko, topped with avocado, wasabi mayo and teriyaki", price: "8.00" },
+      { name: "Salmon Cheese", desc: "Cream cheese, mango, cucumber and avocado, topped with salmon, wasabi mayo and teriyaki. Eight pieces", price: "7.90" },
+      { name: "Age Maki", desc: "Crispy fried roll with BBQ eel, cucumber, mango and crabstick, teriyaki sauce. Six pieces", price: "7.95" },
+      { name: "Spider Roll", desc: "Crispy softshell crab, lettuce and spring onion, wasabi mayo and teriyaki. Six pieces", price: "7.50" },
+      { name: "Crazy Roll", desc: "Crabstick, wasabi mayo, mango and cucumber with mango sauce. Eight pieces", price: "6.80" },
+      { name: "California Maki", desc: "Crabstick, avocado, cucumber, tobiko and Japanese mayo. Eight pieces", price: "6.75" },
+      { name: "Sake Kawa Maki", desc: "Crispy salmon skin, spring onion and lettuce, wasabi mayo and teriyaki. Six pieces", price: "5.50" },
+      { name: "Vegetarian Maki", desc: "Seasonal vegetables. Six pieces", price: "5.50", v: "V" }
     ]
   },
   {
-    title: "Ramen", jp: "ラーメン",
+    title: "Hosomaki & Temaki", jp: "細巻 · 手巻", note: "Hosomaki six pieces · Temaki hand roll, one piece",
     items: [
-      { name: "Tonkotsu Ramen", jp: "豚骨", desc: "Rich pork broth, chashu, soft egg, nori", price: "15.90" },
-      { name: "Spicy Miso Ramen", jp: "味噌", desc: "Miso and chilli broth, minced pork, corn, beansprouts", price: "15.90" },
-      { name: "Vegan Shoyu Ramen", jp: "醤油", desc: "Shiitake and kombu broth, tofu, greens", price: "14.90" }
+      { name: "Avocado Hosomaki", desc: "", price: "4.75", v: "V, VG" },
+      { name: "Cucumber Hosomaki", desc: "", price: "4.25", v: "V, VG" },
+      { name: "Salmon or Tuna Hosomaki", desc: "", price: "4.95" },
+      { name: "Tuna or Salmon Temaki", desc: "Cone-shaped hand roll", price: "4.50" },
+      { name: "California Temaki", desc: "Crabstick, avocado, cucumber and flying fish roe", price: "4.50" },
+      { name: "Unagi Temaki", desc: "Barbecued eel", price: "4.50" }
     ]
   },
   {
-    title: "Dessert", jp: "甘味",
+    title: "Donburi", jp: "丼", note: "Rice bowls, served with miso soup and Japanese pickles",
     items: [
-      { name: "Mochi Ice Cream", jp: "餅", desc: "Three flavours", price: "6.50" },
-      { name: "Matcha Ice Cream", jp: "抹茶", desc: "With black sesame", price: "5.90" }
+      { name: "Katsu Don", desc: "Crispy breaded pork cutlet simmered with onion and egg in a sweet savoury broth", price: "11.50" },
+      { name: "Tori Katsu Don", desc: "Crispy breaded chicken simmered with onion and egg in a sweet savoury broth", price: "11.50" },
+      { name: "Tori Ju", desc: "Grilled chicken teriyaki over rice", price: "11.50" },
+      { name: "Spicy Salmon Donburi", desc: "Freshly chopped salmon, Japanese chilli oil, over sushi rice", price: "11.20" },
+      { name: "Spicy Tuna Donburi", desc: "Freshly chopped tuna, Japanese chilli oil, over sushi rice", price: "11.50" }
+    ]
+  },
+  {
+    title: "Teishoku", jp: "定食", note: "Set meals, served with miso soup and Japanese pickles",
+    items: [
+      { name: "Chicken Katsu Curry", desc: "With steamed rice", price: "11.50" },
+      { name: "Pork Katsu Curry", desc: "With steamed rice", price: "11.50" },
+      { name: "Yasai Katsu Curry", desc: "Mixed vegetable katsu curry with steamed rice", price: "9.95", v: "V, VG" },
+      { name: "Tonkatsu", desc: "Breaded pork with salad and tonkatsu sauce", price: "11.00" },
+      { name: "Tori Katsu", desc: "Breaded chicken with salad and tonkatsu sauce", price: "11.00" },
+      { name: "Kamo", desc: "Crispy roasted duck, miso teriyaki, mixed vegetables", price: "13.95" }
     ]
   }
 ];

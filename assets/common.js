@@ -83,8 +83,8 @@
     return s + "</svg>";
   }
   document.querySelectorAll(".mon").forEach(function (el) {
-    var fill = el.getAttribute("data-fill") || "#7d1d2b";
-    el.innerHTML = mon(fill, el.getAttribute("data-line") || "#ffffff", el.getAttribute("data-centre") || fill);
+    var fill = el.getAttribute("data-fill") || "#ff0f74";
+    el.innerHTML = mon(fill, el.getAttribute("data-line") || "#ffffff", el.getAttribute("data-centre") || "#c00000");
   });
 
   // ---- Mobile menu toggles ----

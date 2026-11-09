@@ -100,3 +100,12 @@ a { color: inherit; }
 }
 .tagline { display: inline-flex; align-items: center; gap: .6em; color: var(--rose); }
 .tagline::before { content: ""; width: 2.4em; height: 2px; background: var(--red); }
+
+/* Vegetarian / vegan marker on menu items */
+.vv { font-size: 10px; font-weight: 600; letter-spacing: .08em; color: #4c7a34; margin-left: 6px; white-space: nowrap; }
+/* Four-photo gallery row */
+.gal4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.gal4 .ph { aspect-ratio: 1; }
+@media (max-width: 760px) { .gal4 { grid-template-columns: 1fr 1fr; } }
+.rating { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; letter-spacing: .06em; }
+.rating b { color: #e0a100; font-size: 14px; letter-spacing: 1px; }

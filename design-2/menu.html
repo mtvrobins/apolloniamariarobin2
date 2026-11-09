@@ -23,7 +23,7 @@
 </header>
 
 <section class="mhero">
-  <div data-img="fish"></div>
+  <div data-img="grill"></div>
   <h1>Menu</h1>
 </section>
 
@@ -31,7 +31,7 @@
 
 <p style="text-align:center;color:#999;font-size:14px;letter-spacing:.06em;line-height:1.9;margin:0;padding:0 20px 60px">Book or order for collection: <strong style="color:#fff">01934 418388</strong><br>Please tell us about any allergies when you order.</p>
 <footer class="foot">
-  <span class="mon" data-fill="#c8202f" data-line="#0b0a0a"></span>
+  <span class="mon" data-line="#0b0a0a"></span>
   Sakura · Japanese Restaurant · Weston-super-Mare
 </footer>
 <p class="credit dark-credit">Created by Yvis Hausen</p>
@@ -41,7 +41,7 @@ document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
   return '<section class="msec"><h2>' + s.title + '</h2><div class="jp">' + s.jp + '</div>' +
     (s.note ? '<p class="note">' + s.note + '</p>' : '') +
     '<div class="items">' + s.items.map(function (it) {
-      return '<div class="mi"><span class="n">' + it.name + '</span><span class="p">£' + it.price +
+      return '<div class="mi"><span class="n">' + it.name + (it.v ? ' <small class="vv">' + it.v + '</small>' : '') + '</span><span class="p">£' + it.price +
         '</span><span class="d">' + it.desc + '</span></div>';
     }).join('') + '</div></section>';
 }).join('');
