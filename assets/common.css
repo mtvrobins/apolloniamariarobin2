@@ -1,8 +1,9 @@
 /* Shared pieces used by all three Sakura designs */
 :root {
-  --sakura: #e9b3bd;
-  --sakura-soft: #f6e3e6;
-  --rose: #a3304b;
+  --sakura: #ec9aa4;      /* light red for text on dark grounds */
+  --sakura-soft: #f6e6e7;
+  --rose: #7d1d2b;        /* crest maroon, from the shop sign */
+  --red: #c8202f;         /* sign red: the slashes and the rule */
   --ink: #141212;
   --paper: #ffffff;
 }
@@ -85,6 +86,17 @@ a { color: inherit; }
 }
 .dark-credit, .foot-credit { color: rgba(255,255,255,.6) !important; }
 
-/* Blossom mark helper */
-.blossom { display: inline-block; }
-.blossom svg { width: 100%; height: 100%; display: block; }
+/* Sakura crest (mon) helper — drawn by common.js */
+.mon { display: inline-block; }
+.mon svg { width: 100%; height: 100%; display: block; }
+
+/* SAKURA wordmark, after the shop sign: heavy angular caps with red cuts on the A's */
+.wm { font-family: "Russo One", "Arial Black", sans-serif; text-transform: uppercase; letter-spacing: .08em; line-height: 1; white-space: nowrap; }
+.wm i { font-style: normal; position: relative; display: inline-block; }
+.wm i::after {
+  content: ""; position: absolute; left: 50%; top: .05em;
+  width: .12em; height: .42em; background: var(--red);
+  transform: translateX(-20%) rotate(30deg);
+}
+.tagline { display: inline-flex; align-items: center; gap: .6em; color: var(--rose); }
+.tagline::before { content: ""; width: 2.4em; height: 2px; background: var(--red); }

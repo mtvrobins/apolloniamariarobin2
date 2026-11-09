@@ -3,45 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sakura · Our Menu</title>
+<title>Sakura · Menu · Weston-super-Mare</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Cormorant+Garamond:ital,wght@1,600&family=Noto+Serif&family=Yuji+Boku&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Russo+One&family=Cormorant+Garamond:ital,wght@1,600&family=Noto+Serif&family=Yuji+Boku&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/common.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="head">
   <a class="brand" href="index.html" data-logo="90">
-    <span class="blossom"></span>
-    <div class="w">sakura</div>
-    <span class="t">Japanese Sushi Bar</span>
+    <span class="mon"></span>
+    <span>
+      <span class="wm">S<i>A</i>KUR<i>A</i></span>
+      <span class="t">Japanese Restaurant</span>
+    </span>
   </a>
   <nav class="plain">
     <a href="index.html">Home</a>
     <a href="index.html#about">About Us</a>
     <a href="menu.html" class="active">Menu</a>
-    <a href="index.html#about">Reservations</a>
+    <a href="index.html#visit">Book a Table</a>
   </nav>
 </header>
 
 <section class="mtitle">
-  <span class="blossom" data-fill="#ffffff" data-centre="#ffffff"></span>
+  <span class="mon" data-fill="#ffffff" data-line="#7d1d2b"></span>
   <h1>Our Menu</h1>
-  <p>Leave it up to the chef</p>
+  <p>Sushi · Sashimi · Donburi · Ramen</p>
 </section>
 
 <section class="mbody">
   <div class="mgrid" id="menu"></div>
   <div class="photos">
-    <div data-img="sushi-1"></div>
-    <div data-img="sushi-3"></div>
-    <div data-img="chef"></div>
+    <div data-img="hero"></div>
+    <div data-img="fish"></div>
+    <div data-img="noren"></div>
   </div>
 </section>
 
 <footer class="foot">
-  Sakura · Japanese Sushi Bar<br>
-  On the seafront · Tuesday – Sunday, 17:00 – 22:30
+  Book or order for collection: 01934 418388 · Please tell us about any allergies<br>
+  36 Boulevard, Weston-super-Mare BS23 1NF
 </footer>
 <p class="credit foot-credit">Created by Yvis Hausen</p>
 <script src="../assets/menu-data.js"></script>
@@ -50,7 +52,7 @@ document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
   return '<div class="card"><span class="ic">' + (s.jp.length <= 2 ? s.jp : '桜') + '</span><h2>' + s.title + '</h2>' +
     (s.note ? '<p class="note">' + s.note + '</p>' : '') +
     s.items.map(function (it) {
-      return '<div class="mi"><div class="row"><span>' + it.name + '</span><span class="p">' + it.price +
+      return '<div class="mi"><div class="row"><span>' + it.name + '</span><span class="p">£' + it.price +
         '</span></div><p>' + it.desc + '</p></div>';
     }).join('') + '</div>';
 }).join('');

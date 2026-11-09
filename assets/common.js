@@ -2,7 +2,7 @@
    1. Left/right arrows to switch between the three designs (same page type)
    2. Loads restaurant photos from /images into [data-img] slots
    3. Swaps in the real logo (images/logo.png) when it exists
-   4. Draws the cherry-blossom mark into .blossom elements */
+   4. Draws the Sakura crest into .mon elements */
 (function () {
   var DESIGNS = ["design-1", "design-2", "design-3"];
   var NAMES = ["Minimal Ink", "Night Counter", "Blossom Circles"];
@@ -60,17 +60,31 @@
     });
   });
 
-  // ---- 4. Blossom mark ----
-  var petal = "M0,-5 C-10,-14 -12,-30 -5,-41 L0,-35 L5,-41 C12,-30 10,-14 0,-5Z";
-  function blossom(fill, centre) {
-    var s = '<svg viewBox="-46 -46 92 92" aria-hidden="true">';
-    for (var k = 0; k < 5; k++) s += '<path d="' + petal + '" fill="' + fill + '" transform="rotate(' + k * 72 + ')"/>';
-    s += '<circle r="5" fill="' + centre + '"/>';
-    for (var j = 0; j < 5; j++) s += '<circle cx="0" cy="-11" r="1.6" fill="' + centre + '" transform="rotate(' + (j * 72 + 36) + ')"/>';
+  // ---- 4. Sakura crest (mon), after the flower on the shop sign ----
+  function mon(fill, line, centre) {
+    var P = Math.PI / 180, s = '<svg viewBox="-50 -50 100 100" aria-hidden="true"><g fill="' + fill + '">';
+    for (var k = 0; k < 5; k++) {
+      var a = (k * 72 - 90) * P;
+      s += '<circle cx="' + (31 * Math.cos(a)).toFixed(2) + '" cy="' + (31 * Math.sin(a)).toFixed(2) + '" r="18"/>';
+    }
+    s += '<circle r="31"/></g>';
+    for (var j = 0; j < 5; j++) {
+      var b = (j * 72 - 54) * P;
+      s += '<line x1="' + (25 * Math.cos(b)).toFixed(2) + '" y1="' + (25 * Math.sin(b)).toFixed(2) + '" x2="' + (49 * Math.cos(b)).toFixed(2) + '" y2="' + (49 * Math.sin(b)).toFixed(2) + '" stroke="' + line + '" stroke-width="2.4"/>';
+    }
+    var inner = "", innerFill = "";
+    for (var m = 0; m < 5; m++) {
+      var c = (m * 72 - 90) * P, x = (14 * Math.cos(c)).toFixed(2), y = (14 * Math.sin(c)).toFixed(2);
+      inner += '<circle cx="' + x + '" cy="' + y + '" r="11" fill="' + line + '"/>';
+      innerFill += '<circle cx="' + x + '" cy="' + y + '" r="8.8" fill="' + fill + '"/>';
+    }
+    s += inner + innerFill;
+    s += '<circle r="10.5" fill="' + line + '"/><circle r="8.3" fill="' + centre + '"/>';
     return s + "</svg>";
   }
-  document.querySelectorAll(".blossom").forEach(function (el) {
-    el.innerHTML = blossom(el.getAttribute("data-fill") || "#e9b3bd", el.getAttribute("data-centre") || "#a3304b");
+  document.querySelectorAll(".mon").forEach(function (el) {
+    var fill = el.getAttribute("data-fill") || "#7d1d2b";
+    el.innerHTML = mon(fill, el.getAttribute("data-line") || "#ffffff", el.getAttribute("data-centre") || fill);
   });
 
   // ---- Mobile menu toggles ----

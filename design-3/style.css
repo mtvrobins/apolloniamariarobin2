@@ -2,9 +2,10 @@
 body { font-family: "Open Sans", system-ui, sans-serif; color: #222; }
 header.head { display: flex; align-items: center; justify-content: center; gap: 70px; padding: 22px 24px 18px; border-bottom: 1px solid #e6e6e6; }
 .brand { text-align: center; text-decoration: none; color: #111; display: block; }
-.brand .blossom { width: 46px; height: 46px; margin: 0 auto -6px; }
-.brand .w { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 52px; line-height: 1; letter-spacing: .01em; }
-.brand .t { color: var(--rose); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; border-top: 1px solid var(--rose); padding-top: 4px; margin-top: 4px; display: inline-block; }
+.brand { display: flex; align-items: center; gap: 16px; text-align: left; }
+.brand .mon { width: 62px; height: 62px; flex: none; }
+.brand .wm { font-size: 36px; display: block; }
+.brand .t { color: var(--rose); font-size: 13px; letter-spacing: .06em; margin-top: 8px; display: block; border-top: 2px solid var(--red); padding-top: 5px; }
 nav.plain { display: flex; gap: 46px; }
 nav.plain a { text-decoration: none; font-size: 15px; color: #333; }
 nav.plain a.active, nav.plain a:hover { color: var(--rose); }
@@ -17,7 +18,7 @@ nav.plain a.active, nav.plain a:hover { color: var(--rose); }
   box-shadow: 0 10px 40px rgba(0,0,0,.25); color: var(--rose);
 }
 .circle.big { width: 270px; height: 270px; left: 50%; top: 50%; transform: translate(-58%, -55%); padding: 30px; }
-.circle.big .blossom { width: 44px; height: 44px; margin: 0 auto 6px; }
+.circle.big .mon { width: 50px; height: 50px; margin: 0 auto 8px; display: block; }
 .circle.big h1 { font-size: 15px; font-weight: 600; letter-spacing: .02em; margin: 0; text-transform: uppercase; }
 .circle.big hr { width: 34px; border: 0; border-top: 2px solid var(--rose); margin: 12px auto; }
 .circle.big p { margin: 0; font-size: 13px; line-height: 1.5; color: #5a1b29; }
@@ -29,6 +30,12 @@ nav.plain a.active, nav.plain a:hover { color: var(--rose); }
 .band { background: var(--rose); padding: 40px 24px 50px; }
 .band .grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .band .ph { aspect-ratio: 4 / 3; }
+.visit3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; padding: 0 24px 80px; text-align: center; }
+.visit3 > div { border: 2px solid var(--rose); border-radius: 18px; padding: 26px 18px; }
+.visit3 h3 { font-family: "Noto Serif", serif; font-weight: 400; color: var(--rose); margin: 0 0 10px; font-size: 20px; }
+.visit3 p { margin: 0; line-height: 1.8; color: #555; font-size: 14px; }
+.visit3 .big { font-size: 20px; color: #111; font-weight: 600; }
+.visit3 a { color: var(--red); }
 .band .cap { color: #fff; text-align: center; font-family: "Noto Serif", serif; font-size: 15px; margin-top: 12px; }
 
 .welcome { max-width: 720px; margin: 0 auto; text-align: center; padding: 80px 24px; }
@@ -41,7 +48,7 @@ footer.foot { background: #2a0f16; color: #f1d5da; text-align: center; padding: 
 
 /* Menu */
 .mtitle { background: var(--rose); color: #fff; text-align: center; padding: 60px 20px; position: relative; overflow: hidden; }
-.mtitle .blossom { position: absolute; width: 240px; height: 240px; opacity: .12; right: -40px; top: -40px; }
+.mtitle .mon { position: absolute; width: 260px; height: 260px; opacity: .14; right: -50px; top: -50px; }
 .mtitle h1 { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 56px; margin: 0; }
 .mtitle p { margin: 6px 0 0; letter-spacing: .2em; text-transform: uppercase; font-size: 12px; }
 .mbody { background: #faf5f6; padding: 70px 24px; }
@@ -68,6 +75,6 @@ footer.foot { background: #2a0f16; color: #f1d5da; text-align: center; padding: 
   nav.plain { gap: 22px; flex-wrap: wrap; justify-content: center; }
   .hero { height: auto; padding: 40px 16px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
   .circle { position: relative; left: auto !important; top: auto !important; transform: none !important; }
-  .band .grid { grid-template-columns: 1fr; }
+  .band .grid, .visit3 { grid-template-columns: 1fr; }
   .mgrid { columns: 1; }
 }

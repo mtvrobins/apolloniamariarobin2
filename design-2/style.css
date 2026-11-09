@@ -3,8 +3,8 @@ body { font-family: "Roboto Condensed", system-ui, sans-serif; background: #fff;
 header.bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 52px; background: #fff; position: relative; z-index: 5; }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #111; }
 .logo .k { font-family: "Yuji Boku", serif; font-size: 50px; line-height: 1; }
-.logo .w { font-family: "Yuji Boku", serif; font-size: 30px; letter-spacing: .04em; }
-.logo .dot { width: 7px; height: 7px; background: var(--rose); align-self: flex-end; margin-bottom: 8px; }
+.logo .wm { font-size: 28px; letter-spacing: .1em; }
+.logo .sub { display: block; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--rose); margin-top: 6px; font-weight: 500; }
 nav.caps { display: flex; gap: 22px; }
 nav.caps a { text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #222; }
 nav.caps a:hover, nav.caps a.active { color: var(--rose); }
@@ -27,11 +27,17 @@ nav.caps a:hover, nav.caps a.active { color: var(--rose); }
 .story h2 { font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--sakura); margin: 0 0 18px; font-weight: 700; }
 .story p { font-family: "Noto Serif JP", serif; font-weight: 300; font-size: 18px; line-height: 1.9; margin: 0; color: #ddd; }
 .story .cta { margin-top: 30px; align-self: flex-start; text-decoration: none; color: #fff; border-bottom: 1px solid var(--sakura); font-size: 12px; letter-spacing: .25em; text-transform: uppercase; padding-bottom: 6px; font-weight: 700; }
-.strip { display: grid; grid-template-columns: repeat(4, 1fr); }
-.strip .ph { aspect-ratio: 1; }
+.strip { position: relative; }
+.strip .ph { aspect-ratio: 3 / 1; }
+.strip .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 24px; text-align: center; color: #fff; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; font-size: 12px; background: linear-gradient(transparent, rgba(0,0,0,.65)); }
+.visit { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding: 70px max(24px, calc((100% - 1080px) / 2)); text-align: center; }
+.visit h3 { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--sakura); margin: 0 0 14px; }
+.visit p { margin: 0; line-height: 1.9; color: #ccc; font-family: "Noto Serif JP", serif; font-weight: 300; }
+.visit .big { font-family: "Roboto Condensed", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .08em; color: #fff; }
+.visit a { color: var(--sakura); }
 
 footer.foot { background: #0b0a0a; color: #aaa; text-align: center; padding: 50px 20px 0; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; }
-footer.foot .k { font-family: "Yuji Boku", serif; font-size: 36px; color: var(--sakura); letter-spacing: 0; display: block; margin-bottom: 12px; }
+footer.foot .mon { width: 42px; height: 42px; display: block; margin: 0 auto 14px; }
 .dark-credit { background: #0b0a0a; color: #ddd; }
 
 /* Menu */
@@ -57,5 +63,6 @@ footer.foot .k { font-family: "Yuji Boku", serif; font-size: 36px; color: var(--
   nav.caps.open { display: flex; }
   .story, .items { grid-template-columns: 1fr; }
   .story .txt { padding: 50px 24px; }
-  .strip { grid-template-columns: 1fr 1fr; }
+  .strip .ph { aspect-ratio: 2 / 1; }
+  .visit { grid-template-columns: 1fr; }
 }

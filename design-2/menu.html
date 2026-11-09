@@ -3,35 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sakura · Menu</title>
+<title>Sakura · Menu · Weston-super-Mare</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Yuji+Boku&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Russo+One&family=Yuji+Boku&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/common.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark">
 <header class="bar">
-  <a class="logo" href="index.html" data-logo="54"><span class="k">桜</span><span class="w">Sakura</span><span class="dot"></span></a>
+  <a class="logo" href="index.html" data-logo="54"><span class="k">桜</span><span><span class="wm">S<i>A</i>KUR<i>A</i></span><span class="sub">Japanese Restaurant</span></span></a>
   <button class="burger" data-toggle="#nav" aria-label="Menu">☰</button>
   <nav class="caps" id="nav">
     <a href="index.html#about">About Us</a>
     <a href="menu.html" class="active">Menu</a>
-    <a href="index.html#visit">Reservations</a>
+    <a href="index.html#visit">Book a Table</a>
     <a href="index.html#gallery">Gallery</a>
     <a href="index.html#visit">Contact</a>
   </nav>
 </header>
 
 <section class="mhero">
-  <div data-img="sushi-2"></div>
+  <div data-img="fish"></div>
   <h1>Menu</h1>
 </section>
 
 <main class="menu-body" id="menu"></main>
 
+<p style="text-align:center;color:#999;font-size:14px;letter-spacing:.06em;line-height:1.9;margin:0;padding:0 20px 60px">Book or order for collection: <strong style="color:#fff">01934 418388</strong><br>Please tell us about any allergies when you order.</p>
 <footer class="foot">
-  <span class="k">桜</span>
-  Sakura · Sushi &amp; Omakase · By the sea
+  <span class="mon" data-fill="#c8202f" data-line="#0b0a0a"></span>
+  Sakura · Japanese Restaurant · Weston-super-Mare
 </footer>
 <p class="credit dark-credit">Created by Yvis Hausen</p>
 <script src="../assets/menu-data.js"></script>
@@ -40,7 +41,7 @@ document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
   return '<section class="msec"><h2>' + s.title + '</h2><div class="jp">' + s.jp + '</div>' +
     (s.note ? '<p class="note">' + s.note + '</p>' : '') +
     '<div class="items">' + s.items.map(function (it) {
-      return '<div class="mi"><span class="n">' + it.name + '</span><span class="p">' + it.price +
+      return '<div class="mi"><span class="n">' + it.name + '</span><span class="p">£' + it.price +
         '</span><span class="d">' + it.desc + '</span></div>';
     }).join('') + '</div></section>';
 }).join('');
