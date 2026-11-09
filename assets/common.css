@@ -1,0 +1,90 @@
+/* Shared pieces used by all three Sakura designs */
+:root {
+  --sakura: #e9b3bd;
+  --sakura-soft: #f6e3e6;
+  --rose: #a3304b;
+  --ink: #141212;
+  --paper: #ffffff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ---------- Photo slots ----------
+   Each [data-img] element shows the restaurant photo from /images.
+   Until the photo is added, an ink placeholder with the file name is shown. */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 30% 20%, #3a2a2d 0%, #1b1516 55%, #0e0b0c 100%);
+  background-size: cover;
+  background-position: center;
+}
+.ph::before {
+  content: "桜";
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-family: "Yuji Boku", serif;
+  font-size: clamp(60px, 12vw, 160px);
+  color: rgba(233, 179, 189, .12);
+  pointer-events: none;
+}
+.ph::after {
+  content: "images/" attr(data-label);
+  position: absolute; left: 12px; bottom: 10px;
+  font: 500 11px/1 ui-monospace, Menlo, monospace;
+  letter-spacing: .04em;
+  color: rgba(255, 255, 255, .45);
+}
+/* Once loaded: grade the photo so phone pictures read richer and sharper */
+.ph.loaded { filter: contrast(1.07) saturate(1.1) brightness(.98); }
+.ph.loaded::before, .ph.loaded::after { content: none; }
+.ph.vignette.loaded { box-shadow: inset 0 0 120px rgba(0,0,0,.35); }
+
+/* ---------- Design switcher arrows ---------- */
+.sw {
+  position: fixed; top: 50%; z-index: 1000;
+  width: 52px; height: 52px; margin-top: -26px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(20, 18, 18, .78);
+  color: #fff; text-decoration: none;
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(6px);
+  transition: transform .2s ease, background .2s ease;
+}
+.sw:hover { background: var(--rose); transform: scale(1.06); }
+.sw svg { width: 22px; height: 22px; }
+.sw-l { left: 14px; }
+.sw-r { right: 14px; }
+.sw-label {
+  position: fixed; left: 50%; bottom: 14px; z-index: 1000;
+  transform: translateX(-50%);
+  background: rgba(20, 18, 18, .82); color: #fff;
+  font: 500 11px/1 system-ui, sans-serif; letter-spacing: .12em; text-transform: uppercase;
+  padding: 8px 14px; border-radius: 999px;
+  white-space: nowrap;
+}
+@media (max-width: 640px) { .sw-label { font-size: 9px; letter-spacing: .08em; } }
+@media (max-width: 640px) {
+  .sw { width: 40px; height: 40px; margin-top: -20px; }
+  .sw-l { left: 6px; } .sw-r { right: 6px; }
+}
+
+/* ---------- Credit line ---------- */
+.credit {
+  text-align: center;
+  font: 400 12px/1.4 system-ui, sans-serif;
+  letter-spacing: .08em;
+  padding: 22px 16px 58px;
+  margin: 0;
+  color: #777;
+}
+.dark-credit, .foot-credit { color: rgba(255,255,255,.6) !important; }
+
+/* Blossom mark helper */
+.blossom { display: inline-block; }
+.blossom svg { width: 100%; height: 100%; display: block; }

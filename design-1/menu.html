@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sakura · Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Yuji+Boku&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/common.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav class="boxed">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="index.html#visit">Reservations</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#visit">Contact</a>
+    </nav>
+    <div class="social">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a>
+    </div>
+  </header>
+
+  <section class="menu-head">
+    <div class="kanji">献立</div>
+    <h1>Menu</h1>
+  </section>
+
+  <div class="menu-banner" data-img="hero"></div>
+
+  <section class="menu-grid" id="menu"></section>
+
+  <footer class="foot">© SAKURA SUSHI</footer>
+</div>
+<p class="credit">Created by Yvis Hausen</p>
+<script src="../assets/menu-data.js"></script>
+<script>
+document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
+  return '<div class="msec"><h2>' + s.title + '<span>' + s.jp + '</span></h2>' +
+    (s.note ? '<p class="note">' + s.note + '</p>' : '') +
+    s.items.map(function (it) {
+      return '<div class="mi"><div class="row"><span>' + it.name + (it.jp ? '<span class="jp">' + it.jp + '</span>' : '') +
+        '</span><span>' + it.price + '</span></div><p>' + it.desc + '</p></div>';
+    }).join('') + '</div>';
+}).join('');
+</script>
+<script src="../assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* Design 3 — Blossom Circles (centred logo, circular callouts, rose band) */
+body { font-family: "Open Sans", system-ui, sans-serif; color: #222; }
+header.head { display: flex; align-items: center; justify-content: center; gap: 70px; padding: 22px 24px 18px; border-bottom: 1px solid #e6e6e6; }
+.brand { text-align: center; text-decoration: none; color: #111; display: block; }
+.brand .blossom { width: 46px; height: 46px; margin: 0 auto -6px; }
+.brand .w { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 52px; line-height: 1; letter-spacing: .01em; }
+.brand .t { color: var(--rose); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; border-top: 1px solid var(--rose); padding-top: 4px; margin-top: 4px; display: inline-block; }
+nav.plain { display: flex; gap: 46px; }
+nav.plain a { text-decoration: none; font-size: 15px; color: #333; }
+nav.plain a.active, nav.plain a:hover { color: var(--rose); }
+
+.hero { position: relative; height: 560px; }
+.hero > .ph { position: absolute; inset: 0; }
+.circle {
+  position: absolute; z-index: 2; border-radius: 50%; background: #fff;
+  border: 3px solid var(--rose); display: grid; place-items: center; text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,.25); color: var(--rose);
+}
+.circle.big { width: 270px; height: 270px; left: 50%; top: 50%; transform: translate(-58%, -55%); padding: 30px; }
+.circle.big .blossom { width: 44px; height: 44px; margin: 0 auto 6px; }
+.circle.big h1 { font-size: 15px; font-weight: 600; letter-spacing: .02em; margin: 0; text-transform: uppercase; }
+.circle.big hr { width: 34px; border: 0; border-top: 2px solid var(--rose); margin: 12px auto; }
+.circle.big p { margin: 0; font-size: 13px; line-height: 1.5; color: #5a1b29; }
+.circle.small { width: 130px; height: 130px; left: 22%; top: 58%; font-size: 12px; line-height: 1.4; padding: 14px; color: #5a1b29; }
+.circle.link { width: 150px; height: 150px; left: 68%; top: 38%; text-decoration: none; font-family: "Noto Serif", serif; font-size: 17px; }
+.circle.link:hover { background: var(--sakura-soft); }
+.circle.link svg { width: 16px; height: 16px; margin: 0 auto 4px; display: block; }
+
+.band { background: var(--rose); padding: 40px 24px 50px; }
+.band .grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.band .ph { aspect-ratio: 4 / 3; }
+.band .cap { color: #fff; text-align: center; font-family: "Noto Serif", serif; font-size: 15px; margin-top: 12px; }
+
+.welcome { max-width: 720px; margin: 0 auto; text-align: center; padding: 80px 24px; }
+.welcome h2 { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 40px; margin: 0 0 16px; color: var(--rose); }
+.welcome p { line-height: 1.9; color: #555; font-size: 16px; }
+.welcome .btn { display: inline-block; margin-top: 18px; padding: 12px 30px; border-radius: 999px; background: var(--rose); color: #fff; text-decoration: none; font-size: 14px; }
+
+footer.foot { background: #2a0f16; color: #f1d5da; text-align: center; padding: 40px 20px 0; font-size: 13px; line-height: 1.9; }
+.foot-credit { background: #2a0f16; color: #f1d5da; }
+
+/* Menu */
+.mtitle { background: var(--rose); color: #fff; text-align: center; padding: 60px 20px; position: relative; overflow: hidden; }
+.mtitle .blossom { position: absolute; width: 240px; height: 240px; opacity: .12; right: -40px; top: -40px; }
+.mtitle h1 { font-family: "Cormorant Garamond", serif; font-style: italic; font-weight: 600; font-size: 56px; margin: 0; }
+.mtitle p { margin: 6px 0 0; letter-spacing: .2em; text-transform: uppercase; font-size: 12px; }
+.mbody { background: #faf5f6; padding: 70px 24px; }
+.mgrid { max-width: 1080px; margin: 0 auto; columns: 2; column-gap: 30px; }
+.mgrid .card { break-inside: avoid; margin: 30px 0 30px; display: inline-block; width: 100%; }
+.card { background: #fff; border-radius: 18px; padding: 34px 34px 20px; box-shadow: 0 6px 30px rgba(163,48,75,.08); position: relative; }
+.card .ic {
+  width: 66px; height: 66px; border-radius: 50%; border: 2px solid var(--rose); background: #fff; color: var(--rose);
+  display: grid; place-items: center; font-family: "Yuji Boku", serif; font-size: 20px;
+  position: absolute; top: -26px; right: 28px;
+}
+.card h2 { font-family: "Noto Serif", serif; color: var(--rose); font-size: 22px; margin: 0 0 4px; font-weight: 400; }
+.card .note { color: #999; font-size: 12px; margin: 0 0 10px; }
+.mi { padding: 12px 0; border-bottom: 1px dotted #e3c3ca; }
+.mi:last-child { border-bottom: 0; }
+.mi .row { display: flex; justify-content: space-between; gap: 12px; font-weight: 600; font-size: 15px; }
+.mi .row .p { color: var(--rose); }
+.mi p { margin: 3px 0 0; color: #777; font-size: 13px; line-height: 1.5; }
+.photos { max-width: 720px; margin: 50px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.photos .ph { aspect-ratio: 1; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 0 0 2px var(--rose); }
+
+@media (max-width: 860px) {
+  header.head { flex-direction: column; gap: 14px; }
+  nav.plain { gap: 22px; flex-wrap: wrap; justify-content: center; }
+  .hero { height: auto; padding: 40px 16px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .circle { position: relative; left: auto !important; top: auto !important; transform: none !important; }
+  .band .grid { grid-template-columns: 1fr; }
+  .mgrid { columns: 1; }
+}
