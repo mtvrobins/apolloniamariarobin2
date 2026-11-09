@@ -8,7 +8,7 @@
   --paper: #ffffff;
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; overflow-x: clip; }
 body { background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -113,3 +113,17 @@ a { color: inherit; }
 /* Sakura's own 桜 glyph (traced from their logo), sized like a character */
 .sakura-kanji { display: inline-block; line-height: 1; }
 .sakura-kanji svg { width: 1.08em; height: .96em; display: block; }
+
+/* ---------- Japanese art layers (drawn by ornaments.js) ---------- */
+.orn { position: absolute; pointer-events: none; z-index: 1; }
+.orn svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.wave-band { height: 46px; background-repeat: repeat; }
+.has-orn { position: relative; }
+.has-orn > *:not(.orn):not(.petals) { position: relative; z-index: 2; }
+.petals { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 3; }
+.petal { position: absolute; top: -6%; opacity: .85; animation-name: petal-fall, petal-sway; animation-timing-function: linear, ease-in-out; animation-iteration-count: infinite, infinite; animation-direction: normal, alternate; }
+.petal svg { width: 100%; height: 100%; display: block; }
+@keyframes petal-fall { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(115vh) rotate(540deg); } }
+@keyframes petal-sway { from { margin-left: -24px; } to { margin-left: 24px; } }
+@media (prefers-reduced-motion: reduce) { .petal { animation: none; } }
+@media (max-width: 760px) { .orn.hide-sm { display: none; } }

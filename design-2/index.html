@@ -24,6 +24,7 @@
 
 <section class="hero">
   <div data-img="nigiri" class="vignette"></div>
+  <div class="petals" data-count="14"></div>
   <div class="over">
     Monday – Saturday
     <div class="gap"></div>
@@ -38,7 +39,9 @@
 
 <section class="dark story" id="about">
   <div data-img="fish"></div>
-  <div class="txt">
+  <div class="txt has-orn" style="overflow:hidden">
+    <div class="orn" data-orn="wave" data-ink="rgba(255,255,255,.045)" data-size="56" style="inset:0;z-index:0"></div>
+    <div class="orn" data-orn="branch" data-ink="#9b8580" style="width:300px;height:150px;right:-40px;top:-20px;opacity:.95"></div>
     <h2>About Us</h2>
     <p>Sakura brings Japanese cooking to the Boulevard. Sea bream, sea bass, mackerel and tuna come in fresh and are cut in our kitchen for sashimi, nigiri and rolls, alongside tempura, katsu curry and generous donburi.</p>
     <a class="cta" href="menu.html">See the menu</a>
@@ -46,7 +49,9 @@
 </section>
 
 <section class="dark story">
-  <div class="txt">
+  <div class="txt has-orn" style="overflow:hidden">
+    <div class="orn" data-orn="wave" data-ink="rgba(255,255,255,.045)" data-size="56" style="inset:0;z-index:0"></div>
+    <div class="orn" data-orn="enso" data-ink="rgba(200,32,47,.35)" style="width:220px;height:220px;right:30px;bottom:20px"></div>
     <h2>Dine In or Collect</h2>
     <p>Take a table under the lanterns, or call ahead and pick up your order on the way home. We are busy most evenings, so booking is recommended.</p>
     <a class="cta" href="#visit">Book a table</a>
@@ -66,17 +71,22 @@
   <div class="cap">料理 · The dining room</div>
 </section>
 
-<section class="dark visit" id="visit">
+<div class="wave-band" data-orn="wave" data-ink="#c8202f" data-fill="#121010" style="background-color:#121010"></div>
+
+<section class="dark visit has-orn" id="visit" style="overflow:hidden">
   <div><h3>Book</h3><p><span class="big">01934 418388</span><br>sakurafinestlimited2021@hotmail.com</p></div>
   <div><h3>Find Us</h3><p>36 Boulevard<br>Weston-super-Mare, BS23 1NF<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Sakura+Japanese+Restaurant+36+Boulevard+Weston-super-Mare+BS23+1NF">Get directions</a></p></div>
   <div><h3>Hours</h3><p>Lunch Tue – Sat 12:00 – 14:30<br>Dinner Mon – Sat 18:00 – 22:00<br>Closed Sunday · <a href="https://www.facebook.com/sakurafinestlimited">Facebook</a></p></div>
 </section>
 
-<footer class="foot">
+<footer class="foot has-orn" style="overflow:hidden">
+  <div class="orn hide-sm" data-orn="branch" data-flip data-ink="#9b8580" style="width:300px;height:150px;left:-20px;bottom:-20px"></div>
+  <div class="orn hide-sm" data-orn="branch" data-ink="#9b8580" style="width:300px;height:150px;right:-20px;bottom:-20px"></div>
   <span class="mon" data-line="#0b0a0a"></span>
   Sakura · Japanese Restaurant · Weston-super-Mare
 </footer>
 <p class="credit dark-credit">Created by Yvis Hausen</p>
 <script src="../assets/common.js"></script>
+<script src="../assets/ornaments.js"></script>
 </body>
 </html>

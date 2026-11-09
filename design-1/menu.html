@@ -26,12 +26,16 @@
     </div>
   </header>
 
-  <section class="menu-head">
+  <section class="menu-head" style="position:relative;isolation:isolate">
+    <div class="orn hide-sm" data-orn="branch" data-flip style="width:380px;height:190px;left:-30px;top:30px"></div>
+    <div class="orn hide-sm" data-orn="branch" style="width:380px;height:190px;right:-30px;top:30px"></div>
+    <div class="orn" data-orn="enso" data-ink="#f1dfe3" style="width:210px;height:210px;left:50%;margin-left:-105px;top:50px;z-index:-1"></div>
     <div class="kanji">献立</div>
     <h1>Menu</h1>
   </section>
 
   <div class="menu-banner" data-img="noren"></div>
+  <div class="wave-band" data-orn="wave" data-ink="#ecdfe1" style="margin:-56px 0 60px"></div>
 
   <section class="menu-grid" id="menu"></section>
 
@@ -51,5 +55,6 @@ document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
 }).join('');
 </script>
 <script src="../assets/common.js"></script>
+<script src="../assets/ornaments.js"></script>
 </body>
 </html>

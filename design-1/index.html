@@ -26,7 +26,10 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" style="position:relative">
+    <div class="orn hide-sm" data-orn="branch" style="width:440px;height:220px;right:-30px;top:-40px"></div>
+    <div class="orn hide-sm" data-orn="branch" data-flip style="width:300px;height:150px;left:-50px;bottom:10px;opacity:.85"></div>
+    <div class="petals" data-count="10"></div>
     <div class="words">
       <h1 class="wm">S<i>A</i>KUR<i>A</i></h1>
       <div class="tagline">Japanese Restaurant</div>
@@ -34,7 +37,8 @@
       <div class="rating" style="margin-top:14px;color:#555"><b>★★★★★</b> 4.8 from 882 reviews</div>
       <span class="mon badge"></span>
     </div>
-    <div class="kanji-block" data-logo="200">
+    <div class="kanji-block" data-logo="200" style="isolation:isolate">
+      <div class="orn" data-orn="enso" data-ink="#f1dfe3" style="width:250px;height:250px;left:-34px;top:-30px;z-index:-1"></div>
       <span class="kanji-side">寿司</span>
       <span class="kanji sakura-kanji">桜</span>
       <span class="seal"><span class="sakura-kanji">桜</span></span>
@@ -49,6 +53,7 @@
   <section class="intro" id="about">
     <span class="mon" style="width:34px;height:34px;margin:0 auto 24px;display:block"></span>
     <h2>Welcome to Sakura</h2>
+    <div data-orn="brush" data-ink="#c8202f" style="width:110px;height:10px;margin:-12px auto 26px"></div>
     <p>A Japanese restaurant on the Boulevard in Weston-super-Mare. Sashimi cut to order, sushi rolled by hand, crisp tempura, katsu curry and generous donburi, served beneath our cherry blossom in a dining room dressed with noren and lanterns. Dine in with us, or call ahead and collect.</p>
   </section>
 
@@ -56,7 +61,8 @@
     <div class="banner" data-img="noren"></div>
     <div class="fresh">
       <div data-img="fish"></div>
-      <div class="txt">
+      <div class="txt has-orn" style="overflow:hidden">
+        <div class="orn" data-orn="branch" style="width:320px;height:160px;right:-60px;bottom:-24px;opacity:.9"></div>
         <span class="jp">新鮮 · fresh every day</span>
         <h2>The Morning's Catch</h2>
         <p>Sea bream, sea bass, mackerel and whole tuna loin come in fresh and are broken down in our kitchen, alongside yellowtail, scallop, sea urchin and bluefin toro.</p>
@@ -71,6 +77,8 @@
     </div>
   </section>
 
+  <div class="wave-band" data-orn="wave" data-ink="#ecdfe1" style="margin-top:90px"></div>
+
   <section class="info" id="visit">
     <div><h3>Opening Hours</h3><p>Lunch Tue – Sat 12:00 – 14:30<br>Dinner Mon – Sat 18:00 – 22:00<br>Closed Sunday</p></div>
     <div><h3>Find Us</h3><p>36 Boulevard<br>Weston-super-Mare<br>BS23 1NF<br><a class="plain" href="https://www.google.com/maps/search/?api=1&amp;query=Sakura+Japanese+Restaurant+36+Boulevard+Weston-super-Mare+BS23+1NF">Get directions</a></p></div>
@@ -81,5 +89,6 @@
 </div>
 <p class="credit">Created by Yvis Hausen</p>
 <script src="../assets/common.js"></script>
+<script src="../assets/ornaments.js"></script>
 </body>
 </html>

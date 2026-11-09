@@ -25,9 +25,16 @@
 <section class="mhero">
   <div data-img="grill"></div>
   <h1>Menu</h1>
+  <div class="petals" data-count="10"></div>
 </section>
 
-<main class="menu-body" id="menu"></main>
+<div class="has-orn" style="overflow:hidden">
+  <div class="orn" data-orn="wave" data-ink="rgba(255,255,255,.045)" data-size="56" style="inset:0;z-index:0"></div>
+  <div class="orn hide-sm" data-orn="branch" data-ink="#9b8580" style="width:400px;height:200px;right:-60px;top:10px"></div>
+  <div class="orn hide-sm" data-orn="branch" data-flip data-ink="#9b8580" style="width:400px;height:200px;left:-60px;bottom:120px"></div>
+  <main class="menu-body" id="menu"></main>
+</div>
+<div class="wave-band" data-orn="wave" data-ink="#c8202f" data-fill="#121010" style="background-color:#121010"></div>
 
 <p style="text-align:center;color:#999;font-size:14px;letter-spacing:.06em;line-height:1.9;margin:0;padding:0 20px 60px">Book or order for collection: <strong style="color:#fff">01934 418388</strong><br>Please tell us about any allergies when you order.</p>
 <footer class="foot">
@@ -47,5 +54,6 @@ document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
 }).join('');
 </script>
 <script src="../assets/common.js"></script>
+<script src="../assets/ornaments.js"></script>
 </body>
 </html>

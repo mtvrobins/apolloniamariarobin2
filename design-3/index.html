@@ -28,6 +28,7 @@
 
 <section class="hero">
   <div data-img="interior"></div>
+  <div class="petals" data-count="14"></div>
   <div class="circle big">
     <div>
       <span class="mon"></span>
@@ -40,7 +41,8 @@
   <a class="circle link" href="menu.html"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>Our Menu</div></a>
 </section>
 
-<section class="band">
+<section class="band has-orn" style="overflow:hidden">
+  <div class="orn" data-orn="wave" data-ink="rgba(255,255,255,.09)" data-size="56" style="inset:0;z-index:0"></div>
   <div class="grid">
     <div><div data-img="fish"></div><div class="cap">Fresh Fish Daily</div></div>
     <div><div data-img="makimono"></div><div class="cap">Signature Rolls</div></div>
@@ -48,7 +50,10 @@
   </div>
 </section>
 
-<section class="welcome" id="about">
+<section class="welcome has-orn" id="about" style="max-width:none;overflow:hidden">
+  <div class="orn hide-sm" data-orn="branch" data-flip style="width:400px;height:200px;left:-30px;top:20px"></div>
+  <div class="orn hide-sm" data-orn="branch" style="width:400px;height:200px;right:-30px;top:20px"></div>
+  <div class="orn" data-orn="enso" data-ink="#f6e1e6" style="width:130px;height:130px;left:50%;margin-left:-65px;top:44px;z-index:0;opacity:.8"></div>
   <h2>Welcome to Sakura</h2>
   <p>Fish comes in fresh and is cut in our own kitchen, rice is seasoned by hand, and every plate is made to order. Join us under the cherry blossom, or call ahead and collect your order.</p>
   <a class="btn" href="#visit">Book a table</a>
@@ -60,11 +65,13 @@
   <div><h3>Find Us</h3><p>36 Boulevard, Weston-super-Mare<br>BS23 1NF<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Sakura+Japanese+Restaurant+36+Boulevard+Weston-super-Mare+BS23+1NF">Get directions</a></p></div>
 </section>
 
+<div class="wave-band" data-orn="wave" data-ink="#7d1d2b" data-fill="#2a0f16" style="background-color:#2a0f16"></div>
 <footer class="foot">
   Sakura · Japanese Restaurant · <a href="https://www.facebook.com/sakurafinestlimited" style="color:inherit">Facebook</a><br>
   36 Boulevard, Weston-super-Mare BS23 1NF · 01934 418388
 </footer>
 <p class="credit foot-credit">Created by Yvis Hausen</p>
 <script src="../assets/common.js"></script>
+<script src="../assets/ornaments.js"></script>
 </body>
 </html>

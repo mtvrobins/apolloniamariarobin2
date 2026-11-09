@@ -78,3 +78,5 @@ footer.foot { background: #2a0f16; color: #f1d5da; text-align: center; padding: 
   .band .grid, .visit3 { grid-template-columns: 1fr; }
   .mgrid { columns: 1; }
 }
+.welcome > p { max-width: 640px; margin-left: auto; margin-right: auto; }
+.mtitle p { position: relative; z-index: 2; }

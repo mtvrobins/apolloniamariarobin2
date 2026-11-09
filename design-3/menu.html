@@ -28,11 +28,15 @@
 
 <section class="mtitle">
   <span class="mon" data-fill="#ffffff" data-line="#7d1d2b"></span>
-  <h1>Our Menu</h1>
+  <div class="orn" data-orn="wave" data-ink="rgba(255,255,255,.1)" data-size="56" style="inset:0;z-index:0"></div>
+  <div class="petals" data-count="10"></div>
+  <h1 style="position:relative;z-index:2">Our Menu</h1>
   <p>Sushi · Sashimi · Tempura · Donburi</p>
 </section>
 
-<section class="mbody">
+<section class="mbody has-orn" style="overflow:hidden">
+  <div class="orn hide-sm" data-orn="branch" data-flip style="width:420px;height:210px;left:-70px;top:-10px;opacity:.9"></div>
+  <div class="orn hide-sm" data-orn="branch" style="width:420px;height:210px;right:-70px;bottom:40px;opacity:.9"></div>
   <div class="mgrid" id="menu"></div>
   <div class="photos">
     <div data-img="uni"></div>
@@ -41,6 +45,7 @@
   </div>
 </section>
 
+<div class="wave-band" data-orn="wave" data-ink="#7d1d2b" data-fill="#2a0f16" style="background-color:#2a0f16"></div>
 <footer class="foot">
   Book or order for collection: 01934 418388 · Please tell us about any allergies<br>
   36 Boulevard, Weston-super-Mare BS23 1NF
@@ -58,5 +63,6 @@ document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
 }).join('');
 </script>
 <script src="../assets/common.js"></script>
+<script src="../assets/ornaments.js"></script>
 </body>
 </html>

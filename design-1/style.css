@@ -83,3 +83,5 @@ footer.foot { text-align: center; padding: 50px 0 0; font-size: 12px; letter-spa
   .banner { aspect-ratio: 2 / 1; }
   .menu-grid { columns: 1; }
 }
+.hero > .words, .hero > .kanji-block { position: relative; z-index: 2; }
+.menu-head > .kanji, .menu-head > h1 { position: relative; z-index: 2; }
