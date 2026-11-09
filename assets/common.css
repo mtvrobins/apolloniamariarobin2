@@ -109,3 +109,7 @@ a { color: inherit; }
 @media (max-width: 760px) { .gal4 { grid-template-columns: 1fr 1fr; } }
 .rating { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; letter-spacing: .06em; }
 .rating b { color: #e0a100; font-size: 14px; letter-spacing: 1px; }
+
+/* Sakura's own 桜 glyph (traced from their logo), sized like a character */
+.sakura-kanji { display: inline-block; line-height: 1; }
+.sakura-kanji svg { width: 1.08em; height: .96em; display: block; }

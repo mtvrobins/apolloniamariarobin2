@@ -14,7 +14,7 @@
   <a class="brand" href="index.html" data-logo="90">
     <span class="mon"></span>
     <span>
-      <span class="wm">S<i>A</i>KUR<i>A</i></span>
+      <span class="wm"><span class="sakura-kanji" style="margin-right:.25em;vertical-align:-.08em">桜</span>S<i>A</i>KUR<i>A</i></span>
       <span class="t">Japanese Restaurant</span>
     </span>
   </a>
@@ -49,7 +49,7 @@
 <script src="../assets/menu-data.js"></script>
 <script>
 document.getElementById("menu").innerHTML = SAKURA_MENU.map(function (s) {
-  return '<div class="card"><span class="ic">' + (s.jp.length <= 2 ? s.jp : '桜') + '</span><h2>' + s.title + '</h2>' +
+  return '<div class="card"><span class="ic">' + (s.jp.length <= 2 ? s.jp : '<span class="sakura-kanji">桜</span>') + '</span><h2>' + s.title + '</h2>' +
     (s.note ? '<p class="note">' + s.note + '</p>' : '') +
     s.items.map(function (it) {
       return '<div class="mi"><div class="row"><span>' + it.name + (it.v ? ' <small class="vv">' + it.v + '</small>' : '') + '</span><span class="p">£' + it.price +
