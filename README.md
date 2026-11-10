@@ -15,6 +15,7 @@ Every page ends with "Created by Yvis Hausen".
 `images/` holds Sakura's own photos (from the photos sent by the user, their TripAdvisor and Wanderlog listings), sharpened and colour-graded for the web.
 To add more, drop a file into `images/` and point a `data-img="name"` slot at it. Adding `logo.png` replaces the drawn crest.
 
+- Logo: `assets/sakura-wordmark.svg`, `assets/sakura-crest.svg` and `assets/sakura-kanji.svg` are vector traces of Sakura's own logo from their printed take-away menu (letters, the three red bars, crest and 桜). `assets/brand.js` assembles them into the lockup used on every page.
 - Logo colours: pink crest `#ff0f74` with red centre `#c00000`, taken from their printed take-away menu.
 - Hours (Wanderlog): Mon 18:00–22:00; Tue–Sat 12:00–14:30 and 18:00–22:00; closed Sunday.
 - Rating: 4.8★ from 882 reviews (Wanderlog).

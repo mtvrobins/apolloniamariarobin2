@@ -90,14 +90,6 @@ a { color: inherit; }
 .mon { display: inline-block; }
 .mon svg { width: 100%; height: 100%; display: block; }
 
-/* SAKURA wordmark, after the shop sign: heavy angular caps with red cuts on the A's */
-.wm { font-family: "Russo One", "Arial Black", sans-serif; text-transform: uppercase; letter-spacing: .08em; line-height: 1; white-space: nowrap; }
-.wm i { font-style: normal; position: relative; display: inline-block; }
-.wm i::after {
-  content: ""; position: absolute; left: 50%; top: .05em;
-  width: .12em; height: .42em; background: var(--red);
-  transform: translateX(-20%) rotate(30deg);
-}
 .tagline { display: inline-flex; align-items: center; gap: .6em; color: var(--rose); }
 .tagline::before { content: ""; width: 2.4em; height: 2px; background: var(--red); }
 
@@ -127,3 +119,13 @@ a { color: inherit; }
 @keyframes petal-sway { from { margin-left: -24px; } to { margin-left: 24px; } }
 @media (prefers-reduced-motion: reduce) { .petal { animation: none; } }
 @media (max-width: 760px) { .orn.hide-sm { display: none; } }
+
+/* ---------- Sakura logo lockup (paths traced from their menu logo) ---------- */
+.sakura-wm { display: inline-block; line-height: 0; }
+.sakura-wm svg { height: 1em; width: auto; display: block; }
+.sakura-logo { display: inline-flex; align-items: center; gap: .3em; color: #111; line-height: 1; vertical-align: middle; }
+.sakura-logo .lk-kanji { display: block; line-height: 0; }
+.sakura-logo .lk-kanji svg { height: 1.9em; width: auto; display: block; }
+.sakura-logo .lk-stack { display: flex; flex-direction: column; align-items: stretch; }
+.sakura-logo .lk-rule { height: max(1px, .045em); background: currentColor; margin: .16em 0 .1em; }
+.sakura-logo .lk-tag { font-family: "Didact Gothic", "Century Gothic", system-ui, sans-serif; font-size: .39em; letter-spacing: .115em; text-align: center; white-space: nowrap; color: #2b2627; line-height: 1.2; }
